@@ -1,6 +1,6 @@
-package br.com.andre.anubis.model;
+package br.com.andre.anubis.dto;
 
-public class Ficha {
+public class FichaDTO {
 
 	private String documento;
 	private String nome;

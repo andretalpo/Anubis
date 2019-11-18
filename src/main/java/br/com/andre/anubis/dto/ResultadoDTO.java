@@ -1,6 +1,6 @@
-package br.com.andre.anubis.model;
+package br.com.andre.anubis.dto;
 
-public class Resultado {
+public class ResultadoDTO {
 
 	private Boolean valido;
 	private String mensagem;

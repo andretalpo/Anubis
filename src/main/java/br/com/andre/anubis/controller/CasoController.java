@@ -3,25 +3,22 @@ package br.com.andre.anubis.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import br.com.andre.anubis.model.Caso;
-import br.com.andre.anubis.model.Ficha;
-import br.com.andre.anubis.model.Resultado;
+import br.com.andre.anubis.dto.CasoDTO;
+import br.com.andre.anubis.dto.FichaDTO;
+import br.com.andre.anubis.dto.ResultadoDTO;
 
-@Controller
+@RestController
 public class CasoController {
-	
+
 	@RequestMapping("/casos")
-	@ResponseBody
-	public List<Caso> listarCasos() {
-		Caso caso1 = new Caso(new Ficha(), new Resultado());
-		List<Caso> lista = new ArrayList<>();
+	public List<CasoDTO> listarCasos() {
+		CasoDTO caso1 = new CasoDTO(new FichaDTO(), new ResultadoDTO());
+		List<CasoDTO> lista = new ArrayList<>();
 		lista.add(caso1);
 		return lista;
 	}
-	
 
 }
